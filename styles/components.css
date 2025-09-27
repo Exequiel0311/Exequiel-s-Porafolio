@@ -35,3 +35,62 @@
     gap: 2rem;
     margin-top: 2rem;
 }
+
+/* Carrusel de servicios */
+.carrusel-servicios {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    scrollbar-width: none;
+}
+
+
+/* Tarjetas de servicio con iconos */
+.tarjeta-servicio {
+    background: var(--color-blanco);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+    min-width: 300px;
+    width: 400px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.icono-servicio {
+    width: 80px;
+    height: 80px;
+    background: var(--color-secundario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--color-blanco);
+}
+
+.lenguajes-servicio {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.lenguaje-chip {
+    background: var(--color-fondo);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--color-primario);
+    border: 1px solid var(--color-borde);
+}
