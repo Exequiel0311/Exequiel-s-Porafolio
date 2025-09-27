@@ -1,13 +1,11 @@
 /* Variables Globales */
 :root {
-    --color-primario: #2c3e50;
-    --color-secundario: #3498db;
-    --color-texto: #333;
-    --color-fondo: #f8f9fa;
-    --color-blanco: #fff;
-    --color-borde: #ddd;
-    --espaciado-base: 1rem;
-    --border-radius: 8px;
+    --color-fondo: #f8fdf8;
+    --color-texto: #83b9a4;
+    --color-primario: #2d5a3d;
+    --color-secundario: #4caf7d;
+    --color-acento: #81c784;
+    --color-borde: #d0e8d0;
 }
 
 * {
@@ -17,10 +15,14 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+}
+
+h1,h2,h3 {
+    font-family: 'Lora', serif;
 }
 
 a {
