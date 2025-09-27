@@ -1,26 +1,29 @@
-/* Contenedores */
-.contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--espaciado-base);
+/* ===== LAYOUT PRINCIPAL ===== */
+body {
+    max-width: var(--ancho-maximo);
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    overflow: visible;
 }
 
-/* Header */
+/* Header ESTÁTICO */
 .encabezado {
     background-color: var(--color-primario);
     color: var(--color-blanco);
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 1.5rem 0;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 0;
 }
 
 .encabezado .contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
 }
 
 .lista-atajos {
@@ -28,17 +31,101 @@
     gap: 2rem;
 }
 
+.lista-atajos a {
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.lista-atajos a:hover {
+    color: var(--color-acento);
+}
+
+/* Main content - Flujo natural */
+main {
+    min-height: 60vh;
+}
+
 /* Footer */
 .footer {
     background-color: var(--color-primario);
     color: var(--color-blanco);
     padding: 2rem 0;
+    border-radius: 0 0 12px 12px;
+    margin-top: auto;
+}
+
+.footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 .contacto-footer {
     display: flex;
-    justify-content: center;
     gap: 2rem;
-    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contacto-footer a {
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.contacto-footer a:hover {
+    color: var(--color-acento);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    :root {
+        --margen-lateral: 1rem;
+    }
+    
+    body {
+        margin: 0 auto;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 var(--margen-lateral);
+    }
+    
+    .encabezado {
+        border-radius: 0;
+        padding: 1rem 0;
+    }
+    
+    .footer {
+        border-radius: 0;
+    }
+    
+    .encabezado .contenedor {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .lista-atajos {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contacto-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-atajos {
+        gap: 0.5rem;
+    }
+    
+    .contacto-footer {
+        gap: 0.5rem;
+    }
 }

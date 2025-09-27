@@ -6,6 +6,10 @@
     --color-secundario: #4caf7d;
     --color-acento: #81c784;
     --color-borde: #d0e8d0;
+    --ancho-maximo: 1400px;
+    --margen-lateral: 2rem;
+    --color-blanco: #ffffff;  
+    --border-radius: 8px;     
 }
 
 * {
@@ -19,9 +23,15 @@ body {
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: 'Lora', serif;
 }
 
