@@ -1,0 +1,38 @@
+/* Variables Globales */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-texto: #333;
+    --color-fondo: #f8f9fa;
+    --color-blanco: #fff;
+    --color-borde: #ddd;
+    --espaciado-base: 1rem;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
