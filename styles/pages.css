@@ -1,0 +1,46 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-blanco);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.contenedor-hero {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-nombre {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Secciones generales */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+/* Formulario */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario-contacto input, 
+.formulario-contacto textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--border-radius);
+}
