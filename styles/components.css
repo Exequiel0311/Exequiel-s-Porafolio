@@ -1,0 +1,37 @@
+/* Botones */
+.boton-contacto {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-contacto:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Tarjetas */
+.tarjeta-servicio, .tarjeta-proyecto {
+    background: var(--color-blanco);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover, .tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+/* Grids */
+.grid-servicios, .grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
