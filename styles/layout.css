@@ -1,0 +1,44 @@
+/* Contenedores */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-base);
+}
+
+/* Header */
+.encabezado {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.encabezado .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-atajos {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.contacto-footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
