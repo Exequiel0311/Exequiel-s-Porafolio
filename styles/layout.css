@@ -8,6 +8,15 @@ body {
     overflow: visible;
 }
 
+.nombre-completo {
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.nombre-completo:hover{
+    color: var(--color-acento);
+}
+
 /* Header ESTÁTICO */
 .encabezado {
     background-color: var(--color-primario);
@@ -86,34 +95,34 @@ main {
     :root {
         --margen-lateral: 1rem;
     }
-    
+
     body {
         margin: 0 auto;
         border-radius: 0;
         box-shadow: none;
         padding: 0 var(--margen-lateral);
     }
-    
+
     .encabezado {
         border-radius: 0;
         padding: 1rem 0;
     }
-    
+
     .footer {
         border-radius: 0;
     }
-    
+
     .encabezado .contenedor {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .lista-atajos {
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .contacto-footer {
         flex-direction: column;
         gap: 1rem;
@@ -124,7 +133,7 @@ main {
     .lista-atajos {
         gap: 0.5rem;
     }
-    
+
     .contacto-footer {
         gap: 0.5rem;
     }
