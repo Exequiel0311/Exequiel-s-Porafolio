@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocha - Desarrollador</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link para íconos (recomiendo FontAwesome o Boxicons) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="contenedor">
+            <h1 class="nombre-completo">Tu Nombre Completo</h1>
+            <p class="titulo-principal">Desarrollador Full Stack</p>
+            <nav>
+                <ul class="lista-atajos">
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section id="hero" class="hero">
+            <div class="contenedor-hero">
+                <h2 class="hero-nombre">Tu Nombre</h2>
+                <p class="hero-actividad">Desarrollo soluciones web eficientes</p>
+                <a href="#contacto" class="boton-contacto">Contactame</a>
+            </div>
+            <!-- El background irá via CSS con una imagen -->
+        </section>
+
+        <!-- SECCIÓN SERVICIOS -->
+        <section id="servicios" class="servicios">
+            <div class="contenedor">
+                <h2>Mis Servicios</h2>
+                <div class="grid-servicios">
+                    <!-- Tarjeta 1 -->
+                    <div class="tarjeta-servicio">
+                        <img src="img/desarrollo-web.jpg" alt="Desarrollo Web">
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios y aplicaciones web responsive y modernas.</p>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="tarjeta-servicio">
+                        <img src="img/base-datos.jpg" alt="Bases de Datos">
+                        <h3>Bases de Datos</h3>
+                        <p>Diseño y optimización de estructuras de datos eficientes.</p>
+                    </div>
+                    <!-- Agregar más tarjetas según necesites -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PROYECTOS -->
+        <section id="proyectos" class="proyectos">
+            <div class="contenedor">
+                <h2>Mis Proyectos</h2>
+                <div class="grid-proyectos">
+                    <!-- Tarjeta Proyecto 1 -->
+                    <div class="tarjeta-proyecto">
+                        <img src="img/proyecto1.jpg" alt="Proyecto 1">
+                        <h3>Nombre del Proyecto</h3>
+                        <div class="tecnologias">
+                            <i class='bx bxl-html5'></i>
+                            <i class='bx bxl-css3'></i>
+                            <i class='bx bxl-javascript'></i>
+                        </div>
+                        <div class="enlaces-proyecto">
+                            <a href="#"><i class='bx bx-link-external'></i> Live Demo</a>
+                            <a href="#"><i class='bx bxl-github'></i> Código</a>
+                        </div>
+                    </div>
+                    <!-- Agregar más proyectos -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARIO CONTACTO -->
+        <section id="contacto" class="contacto">
+            <div class="contenedor">
+                <h2>Contactame</h2>
+                <form class="formulario-contacto">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu email" required>
+                    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="contenedor">
+            <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+            <div class="contacto-footer">
+                <a href="mailto:tuemail@ejemplo.com"><i class='bx bx-envelope'></i> Email</a>
+                <a href="https://github.com/tuusuario"><i class='bx bxl-github'></i> GitHub</a>
+                <a href="https://linkedin.com/in/tuusuario"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
