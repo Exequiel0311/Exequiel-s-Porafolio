@@ -1,5 +1,5 @@
 # Exequiel-s-Porafolio
-# Hola, soy Bocha 👋
+# Hola, soy Exequiel 👋
 
 ### Desarrollador | Enfocado en soluciones eficientes y código claro
 
@@ -19,5 +19,5 @@
 ## 💡 Mi enfoque
 
 - Código mantenible antes que código inteligente.
-- Documentación clara para que cualquiera pueda entender el proyecto.
-- Aprendizaje continuo, pero con bases sólidas.
+- Documentación clara.
+- Aprendizaje continuo.
