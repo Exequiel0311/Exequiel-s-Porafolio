@@ -43,11 +43,6 @@ body {
     font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-/* Main content */
-main {
-    padding: 2rem 0;
-}
-
 /* Footer */
 .footer {
     background-color: var(--color-primario);
