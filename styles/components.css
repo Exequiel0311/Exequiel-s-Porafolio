@@ -311,3 +311,23 @@
     margin-top: 1rem;
     font-weight: 500;
 }
+
+/* Ocultar indicador en móviles muy pequeños */
+@media (max-width: 480px) {
+    .indicador-scroll {
+        display: none;
+    }
+    
+    .carrusel-servicios,
+    .grid-proyectos {
+        gap: 1rem;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tarjeta-servicio,
+    .tarjeta-proyecto {
+        min-width: 300px;
+    }
+}

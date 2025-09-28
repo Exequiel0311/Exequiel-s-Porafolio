@@ -8,14 +8,21 @@
     --color-borde: #d0e8d0;
     --ancho-maximo: 1400px;
     --margen-lateral: 2rem;
-    --color-blanco: #ffffff;  
-    --border-radius: 8px;     
+    --color-blanco: #ffffff;
+    --border-radius: 8px;
+    --padding-mobile: 1rem;
+    --padding-tablet: 1.5rem;
+    --padding-desktop: 2rem;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +34,8 @@ body {
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    overflow-x: hidden;
+    /* Evitar scroll horizontal no deseado */
 }
 
 h1,
