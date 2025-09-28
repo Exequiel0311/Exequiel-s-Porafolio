@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!formulario) return;
     
+    // Obtener textos localizados
+    function getTexto(clave) {
+        const elementos = document.querySelectorAll(`[data-i18n="${clave}"]`);
+        return elementos.length > 0 ? elementos[0].textContent : clave;
+    }
+    
     formulario.addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -26,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (response.ok) {
                 // Éxito
-                mostrarMensaje('✅ Mensaje enviado correctamente. Te responderé pronto!', 'exito');
+                mostrarMensaje(getTexto('mensajeExito'), 'exito');
                 formulario.reset();
             } else {
                 // Error de Formspree
@@ -37,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             // Error de red o otro error
             console.error('Error:', error);
-            mostrarMensaje('❌ Error al enviar el mensaje. Intentá de nuevo.', 'error');
+            mostrarMensaje(getTexto('mensajeError'), 'error');
         } finally {
             // Restaurar botón después de 3 segundos
             setTimeout(() => {

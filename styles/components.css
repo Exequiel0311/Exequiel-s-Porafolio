@@ -1,3 +1,49 @@
+/* Controles del header */
+.controles-header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.boton-control {
+    background: transparent;
+    border: 2px solid var(--color-blanco);
+    color: var(--color-blanco);
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.boton-control:hover {
+    background: var(--color-blanco);
+    color: var(--color-primario);
+    transform: scale(1.1);
+}
+
+.texto-idioma {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Responsive para controles */
+@media (max-width: 768px) {
+    .controles-header {
+        gap: 0.3rem;
+    }
+    
+    .boton-control {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
 /* Botones */
 .boton-contacto {
     display: inline-block;

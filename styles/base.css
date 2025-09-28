@@ -15,10 +15,23 @@
     --padding-desktop: 2rem;
 }
 
+[data-tema="oscuro"] {
+    --color-fondo: #0a1f1a;
+    --color-texto: #e0f2e9;
+    --color-primario: #1a3b2d;
+    --color-secundario: #2d7a5c;
+    --color-acento: #4caf7d;
+    --color-borde: #2a4a3a;
+    --color-blanco: #0a1f1a;
+    --color-sombra: rgba(0, 0, 0, 0.3);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
 }
 
 html {

@@ -7,34 +7,40 @@ const PROYECTOS_LOCALES = [
         descripcion: 'Sitio web desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos de manera profesional.',
         tecnologias: ['html', 'css', 'js'],
         github: 'https://github.com/Exequiel0311/Exequiel-s-Porafolio.git',
-        demo: 'https://exequiel0311.github.io/Exequiel-s-Porafolio/'
+        demo: null
     }
 ];
 
-// Función simplificada
+// Configuración de iconos
+const ICONOS = {
+    html: 'bx bxl-html5',
+    css: 'bx bxl-css3',
+    js: 'bx bxl-javascript',
+    javascript: 'bx bxl-javascript',
+    react: 'bx bxl-react',
+    nodejs: 'bx bxl-nodejs',
+    mongodb: 'bx bxl-mongodb'
+};
+
+// Función para cargar proyectos
 function cargarProyectos() {
     console.log('📦 Cargando proyectos locales...');
     mostrarProyectos(PROYECTOS_LOCALES);
 }
 
-// El resto del código igual...
+// Función para mostrar proyectos
 function mostrarProyectos(proyectos) {
     const contenedor = document.getElementById('contenedor-proyectos');
 
-    if (proyectos.length === 0) {
-        contenedor.innerHTML = '<p>No hay proyectos para mostrar.</p>';
+    if (!contenedor) {
+        console.error('❌ No se encontró el contenedor de proyectos');
         return;
     }
 
-    const ICONOS = {
-        html: 'bx bxl-html5',
-        css: 'bx bxl-css3',
-        js: 'bx bxl-javascript',
-        javascript: 'bx bxl-javascript',
-        react: 'bx bxl-react',
-        nodejs: 'bx bxl-nodejs',
-        mongodb: 'bx bxl-mongodb'
-    };
+    if (proyectos.length === 0) {
+        contenedor.innerHTML = '<p data-i18n="cargandoProyectos">No hay proyectos para mostrar.</p>';
+        return;
+    }
 
     contenedor.innerHTML = proyectos.map(proyecto => `
         <div class="tarjeta-proyecto">
@@ -62,7 +68,7 @@ function mostrarProyectos(proyectos) {
                 ${proyecto.demo ? `
                     <a href="${proyecto.demo}" target="_blank" class="boton-accion demo">
                         <i class='bx bx-link-external'></i>
-                        Pagina
+                        Página
                     </a>
                 ` : ''}
             </div>
@@ -70,4 +76,7 @@ function mostrarProyectos(proyectos) {
     `).join('');
 }
 
-document.addEventListener('DOMContentLoaded', cargarProyectos);
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    cargarProyectos();
+});
