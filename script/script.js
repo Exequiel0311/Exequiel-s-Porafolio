@@ -2,7 +2,7 @@
 const PROYECTOS_LOCALES = [
     {
         id: 1,
-        imagen: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400',
+        imagen: '../assets/heroBg.jpg',
         titulo: 'Mi Portfolio Personal',
         descripcion: 'Sitio web desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos de manera profesional.',
         tecnologias: ['html', 'css', 'js'],

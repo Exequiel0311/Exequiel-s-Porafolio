@@ -177,7 +177,6 @@
     flex-grow: 1; /* OCUPA EL ESPACIO DISPONIBLE */
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* LÍMITEA A 3 LÍNEAS */
     -webkit-box-orient: vertical;
 }
 
