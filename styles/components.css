@@ -107,7 +107,6 @@
     display: flex;
     gap: 2rem;
     padding: 1rem 0;
-    scroll-snap-type: x mandatory;
     overflow-x: auto;
     scrollbar-width: thin;
     justify-content: center;
@@ -310,6 +309,55 @@
     border-radius: var(--border-radius);
     margin-top: 1rem;
     font-weight: 500;
+}
+/* ===== CARRUSEL SIN SNAP AUTOMÁTICO ===== */
+.carrusel-servicios,
+.grid-proyectos {
+    cursor: grab;
+    cursor: -webkit-grab;
+    scroll-snap-type: none !important; /* Deshabilitar completamente */
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carrusel-servicios.dragging,
+.grid-proyectos.dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Remover snap align de las tarjetas */
+.tarjeta-servicio,
+.tarjeta-proyecto {
+    scroll-snap-align: none !important;
+}
+
+/* Scrollbar discreta */
+.carrusel-servicios::-webkit-scrollbar {
+    height: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carrusel-servicios:hover::-webkit-scrollbar {
+    opacity: 0.4;
+}
+
+.carrusel-servicios::-webkit-scrollbar-thumb {
+    background: var(--color-secundario);
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+/* Efectos visuales sutiles durante drag */
+.carrusel-servicios.dragging .tarjeta-servicio {
+    transform: scale(0.99);
+    transition: transform 0.15s ease;
+}
+
+/* Restaurar suavemente al soltar */
+.carrusel-servicios:not(.dragging) .tarjeta-servicio {
+    transition: transform 0.4s ease;
 }
 
 /* Ocultar indicador en móviles muy pequeños */
