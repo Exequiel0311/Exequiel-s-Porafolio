@@ -321,6 +321,7 @@
     .carrusel-servicios,
     .grid-proyectos {
         gap: 1rem;
+        width: 100%;
     }
 }
 
