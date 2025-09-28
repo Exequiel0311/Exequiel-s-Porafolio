@@ -7,7 +7,7 @@ const PROYECTOS_LOCALES = [
         descripcion: 'Sitio web desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos de manera profesional.',
         tecnologias: ['html', 'css', 'js'],
         github: 'https://github.com/Exequiel0311/Exequiel-s-Porafolio.git',
-        demo: 'https://tudominio.com'
+        demo: 'https://exequiel0311.github.io/Exequiel-s-Porafolio/'
     }
 ];
 
