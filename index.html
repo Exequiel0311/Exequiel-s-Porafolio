@@ -138,12 +138,14 @@
         <section id="contacto" class="contacto">
             <div class="contenedor">
                 <h2>Contactame</h2>
-                <form class="formulario-contacto">
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-                    <button type="submit">Enviar mensaje</button>
+                <form action="https://formspree.io/f/xzzjdkgy" method="POST" class="formulario-contacto"
+                    id="formulario-contacto">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                    <button type="submit" id="boton-enviar">Enviar mensaje</button>
                 </form>
+                <div id="mensaje-estado" style="display: none; text-align: center; margin-top: 1rem;"></div>
             </div>
         </section>
     </main>
@@ -162,6 +164,7 @@
     </footer>
 
     <script src="script/script.js"></script>
+    <script src="script/formulario.js"></script>
 </body>
 
 </html>
