@@ -94,3 +94,165 @@
     color: var(--color-primario);
     border: 1px solid var(--color-borde);
 }
+
+/* Contenedor carrusel horizontal */
+.contenedor-proyectos {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.grid-proyectos {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/* Scrollbar personalizada */
+.grid-proyectos::-webkit-scrollbar {
+    height: 8px;
+}
+
+.grid-proyectos::-webkit-scrollbar-track {
+    background: var(--color-fondo);
+    border-radius: 4px;
+}
+
+.grid-proyectos::-webkit-scrollbar-thumb {
+    background: var(--color-secundario);
+    border-radius: 4px;
+}
+
+.grid-proyectos::-webkit-scrollbar-thumb:hover {
+    background: var(--color-acento);
+}
+
+/* Tarjetas de proyectos - TAMAÑO FIJO */
+.tarjeta-proyecto {
+    background: var(--color-blanco);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 350px; /* ANCHO FIJO */
+    height: 450px; /* ALTO FIJO */
+    flex-shrink: 0; /* EVITA QUE SE ENCOJAN */
+    scroll-snap-align: center; /* SNAP AL CENTRO */
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.imagen-proyecto {
+    width: 100%;
+    height: 180px; /* ALTURA FIJA PARA IMAGEN */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-proyecto h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    height: 60px; /* ALTURA FIJA PARA TÍTULO */
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-proyecto p {
+    color: var(--color-texto);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* OCUPA EL ESPACIO DISPONIBLE */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* LÍMITEA A 3 LÍNEAS */
+    -webkit-box-orient: vertical;
+}
+
+.tecnologias-proyecto {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: auto; /* EMPUJA HACIA ABAJO */
+    min-height: 40px; /* ALTURA MÍNIMA */
+}
+
+.icono-tecnologia {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-fondo);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--color-primario);
+    transition: transform 0.2s ease;
+}
+
+.icono-tecnologia:hover {
+    transform: scale(1.1);
+}
+
+/* Indicador de scroll (opcional) */
+.indicador-scroll {
+    text-align: center;
+    color: var(--color-secundario);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Botones de acción */
+.botones-accion {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.boton-accion {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex: 1;
+    justify-content: center;
+    max-width: 120px;
+}
+
+.boton-accion:hover {
+    background: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+.boton-accion.demo {
+    background: var(--color-acento);
+}
+
+.boton-accion.demo:hover {
+    background: var(--color-secundario);
+}
+
+/* Ajustar altura de tarjeta para los botones */
+.tarjeta-proyecto {
+    height: 500px; /* Aumentamos 50px para los botones */
+}
